@@ -24,10 +24,15 @@ end
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
-gem 'kaminari'
 
 #分页
-gem "will_paginate"
+gem 'kaminari'
+#gem "will_paginate"  # rails 2.x 之前的老版本
+
+# Markdown Support
+gem 'redcarpet'
+# Code highlight
+gem 'coderay'
 
 group :development do
   gem 'pry'
