@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="admin">
+<head>
+  <title>骨哥的视界--后台管理</title>
+  <%= stylesheet_link_tag    "admin", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "admin", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <h4>骨哥的视界</h4>
+        <p class="navbar-text navbar-right">
+          <%= link_to '注销', "#" %>
+        </p>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <div class="container">
+        <p class="text-muted">所谓海量，不过是每天不变的积累</p>
+      </div>
+    </footer>
+</body>
+</html>

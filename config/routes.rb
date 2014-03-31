@@ -1,4 +1,20 @@
 MyBlog::Application.routes.draw do
+
+
+  # 后台路由
+  namespace :admin do
+    root :to => 'home#index'
+    resources :posts
+    #resources :gists
+    #resources :categories
+    #resources :wallpapers
+    # 用户登录与注销
+    #get 'login' => 'sessions#new', :as => 'login'
+    #post 'login' => 'sessions#create', :as => 'post_login'
+    #get 'logout' => 'sessions#destroy', :as => 'logout'
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
