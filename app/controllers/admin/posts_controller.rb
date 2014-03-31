@@ -2,7 +2,7 @@ class Admin::PostsController < Admin::ApplicationController
 
   #Blog列表
   def index
-    @posts = Post.all
+    @posts = Post.order('id DESC').page(params[:page]).per(params[:per] || 8)
   end
 
   #新建Blog
@@ -11,31 +11,34 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user = current_user
-    if @post.save()
+    @post = Post.new post_params
+    #@post.user = current_user
+    if @post.save
       redirect_to admin_posts_path
     else
-      render action: 'new'
+      render :new
     end
   end
 
   #编辑Blog
   def edit
+    @post = Post.find params[:id]
   end
 
   def update
-    if @post.update_attributes(post_params)
+    @post = Post.find params[:id]
+    if @post.update post_params
       redirect_to admin_posts_path
     else
-      render action: 'edit'
+      render :edit
     end
   end
 
   #删除BLog
   def destroy
-    @post.delete()
-    redirect_to admin_posts_path
+    @post = Post.find params[:id]
+    @post.destroy
+    redirect_to admin_posts_url
   end
 
   private

@@ -24,6 +24,8 @@ end
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+# 富文本编辑器 for RAILS 4 production: rake kindeditor:assets
+gem 'rails_kindeditor'
 
 #分页
 gem 'kaminari'
