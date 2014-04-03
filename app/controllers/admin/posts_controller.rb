@@ -20,9 +20,6 @@ class Admin::PostsController < Admin::ApplicationController
     end
   end
 
-  #def show
-    #@post = Post.find params[:id]
-  #end
 
   #编辑Blog
   def edit

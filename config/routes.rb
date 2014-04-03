@@ -1,5 +1,6 @@
 MyBlog::Application.routes.draw do
 
+  root 'home#index'
 
   # 后台路由
   namespace :admin do

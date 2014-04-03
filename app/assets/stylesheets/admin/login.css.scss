@@ -1,0 +1,55 @@
+// Place all the styles related to the admin::sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html.login, body{
+  height: 100%;
+}
+.login-box{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  .login-panel{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height:550px;
+    margin:-275px 0 0 -150px;
+    .login-avatar{
+      text-align: center;
+      margin-bottom: 15px;
+      a{
+        display: block;
+        img{
+          background: white;
+          border: 1px solid #ccc;
+          padding: 5px;
+          &:hover{
+          }
+        }
+      }
+      &:after{
+        content: '@cod7ce';
+        position: relative;
+        top: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #bbb;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+    .login-form{
+      margin: 60px auto;
+      padding: 10px;
+      input{
+        color: #699;
+        letter-spacing:2px;
+        font-weight: bold;
+        box-shadow: 0 7px 0 -2px rgba(12,56,92,.1);
+      }
+    }
+  }
+}
