@@ -1,6 +1,14 @@
 // Place all the styles related to the Admin::Home controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/**
+ *= require_self
+ *= require_directory ./admin
+ */
+
+@import 'bootstrap';
+
+
 $header-height: 60px;
 html.admin{
   body{
@@ -12,7 +20,7 @@ html.admin{
    top: 0px;
    width: 100%;
    height: $header-height;
-   background: rgba(255, 255, 255, 0.8);
+   background: rgba(255, 255, 255, 0.80);
    z-index: 1000;
    border-bottom: 1px solid rgba(12, 56, 92, 0.1);
    h4{
@@ -81,3 +89,4 @@ html.admin{
     }
   }
 }
+
