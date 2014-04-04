@@ -1,6 +1,7 @@
 MyBlog::Application.routes.draw do
 
   root 'home#index'
+  get 'about' => 'home#about', :as => 'about'
   resources :posts
 
   # 后台路由

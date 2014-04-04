@@ -1,19 +1,14 @@
 <div class="head-margin"></div>
 <div class="container">
   <div class="row">
-    <% @posts.each_with_index do |post,i| %>
-        <section class="ruby">
+    <% @posts.each do |post| %>
+        <section class="git">
           <div class="date">
             <p class="day"><%= post.created_at.day %></p>
             <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
           </div>
           <p class="title"><%= link_to post.title, post_path(post.id) %></p>
           <p class="summary"><%= post.desc %>
-          <div class="info">
-            <p class="tags">24</p>
-            <p class="category">2013-01</p>
-            <p class="user">2013-01</p>
-          </div>
         </section>
     <% end %>
   </div>
