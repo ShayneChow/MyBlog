@@ -11,6 +11,11 @@
 
 $header-height: 60px;
 html.admin{
+
+  .head-margin{
+    margin-top: $header-height;
+  }
+
   body{
     padding-top: $header-height;
   }
@@ -20,9 +25,8 @@ html.admin{
    top: 0px;
    width: 100%;
    height: $header-height;
-   background: rgba(255, 255, 255, 0.80);
-   z-index: 1000;
-   border-bottom: 1px solid rgba(12, 56, 92, 0.1);
+   background: rgba(152, 159, 175, 0.36);
+
    h4{
     float: left;
     font-size: 20px;
@@ -36,38 +40,7 @@ html.admin{
    }
   }
   
-  div.container{
-      .breadcrumb{
-        margin-top: 20px;
-        background: aliceblue;
-        box-shadow: 0 7px 0 -2px rgba(12, 56, 92, 0.1);
-      }
-      .thumbnail{
-        box-shadow: 0 7px 0 -2px rgba(12, 56, 92, 0.1);
-      }
-      div.blog-model, div.code-model, div.share-model, div.wallpaper-model{
-        background: #1abc9c;
-        text-align: center;
-        height: 150px;
-        line-height: 150px;
-        a{
-          color: white;
-          font-size:36px;
-          &:hover{
-            text-decoration: none;
-          }
-        }
-      }
-      div.code-model{
-        background: #2d89ef;
-      }
-      div.share-model{
-        background: #f34b3a;
-      }
-      div.wallpaper-model{
-        background: #fff01d;
-      }
-  }
+
   footer{
     text-align: center;
     margin-top: 20px;
@@ -82,9 +55,7 @@ html.admin{
         clear: inherit;
       }
     }
-    .form-group{
-      clear: both;
-    }
+
   }
 }
 

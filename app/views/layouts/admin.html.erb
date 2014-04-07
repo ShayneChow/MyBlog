@@ -9,18 +9,21 @@
 <body>
     <header>
       <div class="container">
-        <h4>骨哥的视界</h4>
+        <h4><%= link_to "骨哥的视界", admin_root_path %></h4>
         <p class="navbar-text navbar-right">
-          <%= link_to '注销', "#" %>
+          <%= link_to '注销', "#", class: 'btn-sm btn-danger' %>
         </p>
       </div>
     </header>
-    <div class="row">
-      <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="head-margin"></div>
+        <%= yield %>
+      </div>
     </div>
     <footer>
       <div class="container">
-        <p class="text-muted">所谓海量，不过是每天不变的积累</p>
+        <p class="text-muted">To be simple! To be great! Give the world a shake!</p>
       </div>
     </footer>
 </body>
