@@ -36,6 +36,9 @@ gem 'redcarpet'
 # Code highlight
 gem 'coderay'
 
+#安全密码
+gem 'bcrypt-ruby'
+
 group :development do
   gem 'pry'
   gem 'better_errors'

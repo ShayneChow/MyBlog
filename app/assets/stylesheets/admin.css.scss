@@ -12,7 +12,18 @@
 $header-height: 60px;
 html.admin{
 
-  .head-margin{
+  #logo {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1;
+  }
+  #logo:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+.head-margin{
     margin-top: $header-height;
   }
 
@@ -25,11 +36,11 @@ html.admin{
    top: 0px;
    width: 100%;
    height: $header-height;
-   background: rgba(152, 159, 175, 0.36);
+   background: rgba(20, 20, 20, 0.79);
 
    h4{
     float: left;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 20px;
    }
    p.navbar-right{
