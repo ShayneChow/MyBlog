@@ -23,6 +23,7 @@ html.login, body{
       a{
         display: block;
         img{
+          width: 200px;
           background: white;
           border: 1px solid #ccc;
           padding: 5px;
@@ -31,7 +32,7 @@ html.login, body{
         }
       }
       &:after{
-        content: '@cod7ce';
+        content: '@ShayneChow';
         position: relative;
         top: 15px;
         font-size: 12px;

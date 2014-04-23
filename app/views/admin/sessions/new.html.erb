@@ -1,0 +1,36 @@
+<div class="login-box">
+  <div class="login-panel">
+    <div class="login-avatar">
+      <a href="https://github.com/ShayneChow" target="_blank">
+        <img src="/images/logo.png" alt="shayne@authbuy.org" class="img-circle">
+      </a>
+    </div>
+    <div class="login-form">
+      <%= form_tag admin_login_path, role: 'form'  do %>
+          <div class="form-group">
+            <%= label_tag :email, :email %>
+            <%= text_field_tag :email, nil, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= label_tag :password, :password %>
+            <%= password_field_tag :password, nil, class: 'form-control' %>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8">
+              <% unless flash.alert.blank? %>
+                  <p class="message error"><i class="fa fa-frown-o"></i> <%= flash.alert %></p>
+              <% end %>
+              <% unless notice.blank? %>
+                  <p class="message success"><i class="fa fa-smile-o"></i> <%= notice %></p>
+              <% end %>
+            </div>
+            <div class="col-sm-4">
+              <%= submit_tag 'Sign in', class: 'btn btn-default pull-right' %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

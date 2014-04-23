@@ -11,10 +11,11 @@ MyBlog::Application.routes.draw do
     #resources :gists
     #resources :categories
     #resources :wallpapers
-    # 用户登录与注销
-    #get 'login' => 'sessions#new', :as => 'login'
-    #post 'login' => 'sessions#create', :as => 'post_login'
-    #get 'logout' => 'sessions#destroy', :as => 'logout'
+    #用户登录与注销
+    resources :sessions
+    get 'login' => 'sessions#new', :as => 'login'
+    post 'login' => 'sessions#create', :as => 'post_login'
+    get 'logout' => 'sessions#destroy', :as => 'logout'
   end
 
 
