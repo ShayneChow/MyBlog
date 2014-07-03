@@ -32,7 +32,7 @@ gem 'kaminari'
 #gem "will_paginate"  # rails 2.x 之前的老版本
 
 # Markdown Support
-gem 'redcarpet'
+gem 'redcarpet', '~> 2.0'
 # Code highlight
 gem 'coderay'
 
@@ -44,3 +44,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+#标签
+gem 'acts-as-taggable-on'
