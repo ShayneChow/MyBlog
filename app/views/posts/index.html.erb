@@ -1,6 +1,14 @@
 <div class="head-margin"></div>
 <div class="container">
   <div class="row">
+    <div class="tag_cloud">
+      <p>标签索引列表</p><hr>
+        <div class="tag">
+          <% tag_cloud Post.tag_counts, %w[s m l] do |tag| %>
+              <%= link_to tag.name, tag_path(tag.name) %>
+          <% end %>
+        </div>
+     </div>
     <% @posts.each do |post| %>
         <section class="git">
           <div class="date">
@@ -8,6 +16,9 @@
             <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
           </div>
           <p class="title"><%= link_to post.title, post_path(post.id) %></p>
+          <% if !post.tag_list.blank? %>
+            <p class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%></p>
+          <% end %>
           <p class="summary"><%= post.desc %>
         </section>
     <% end %>

@@ -1,6 +1,7 @@
 MyBlog::Application.routes.draw do
 
   root 'home#index'
+  get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about' => 'home#about', :as => 'about'
   resources :posts
 

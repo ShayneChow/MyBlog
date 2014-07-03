@@ -97,17 +97,40 @@ $front-header-height: 120px;
     padding: 5px;
   }
 }
+
+/*标签列表*/
+.tag_cloud {
+  padding: 10px 20px 30px 100px;
+  margin: 0px 40px;
+  background: #fbfbfb;
+  p{
+    font-size: 18px;
+  }
+  .tag{
+    //position: relative;
+    font-size: 24px;
+    a{
+      color: #3f49b4;
+      padding: 5px;
+    }
+  }
+}
+
 section{
   margin: 0px 40px;
   padding: 40px 30px 50px 100px;
   border-bottom: 1px dashed #ccc;
   position: relative;
   &:hover{
-    border-bottom: 1px solid #ccc;
+    div{
+      background: #30cc2b;
+    }
+    border-bottom: 3px solid #30cc2b;
   }
   a{
     &:hover{
-      padding-left: 10px;
+      padding-left: 5px;
+      color: #3f49b4;
     }
   }
   .title{
@@ -140,16 +163,6 @@ section{
     }
     .year{
       font-size: 16px;
-    }
-  }
-  .info{
-    display: none;
-    position: absolute;
-    right: 10px;
-    bottom: 0;
-    color: #666;
-    p{
-      float: left;
     }
   }
 }
