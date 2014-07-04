@@ -16,11 +16,12 @@
 @import 'mixin';
 
 /* home & header*/
-$front-header-height: 120px;
-
+$front-header-height: 80px;
+/*
   .head-margin{
     margin-top: $front-header-height;
   }
+*/
   .text-center{
     text-align: center;
   }
@@ -64,27 +65,24 @@ $front-header-height: 120px;
       }
     }
   }
-  .jumbotron{
-    padding-top: 0;
-    padding-bottom: 0;
-    h1,h2{
+  .home{
+
+    h1{
       color: #141414;
       margin-bottom: 30px;
-      letter-spacing: 0.2em;
-      font-weight: 200;
+      letter-spacing: 0.3em;
+      font-weight: 100;
     }
     p{
       color: #141414;
     }
   }
 
-  #gugeview{
-    div{
-      position: relative;
-    }
-  }
-
 /* home & header EOL */
+
+.row{
+  margin-top: $front-header-height;
+}
 
 
 /* post */
