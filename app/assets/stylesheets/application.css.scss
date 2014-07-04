@@ -17,11 +17,7 @@
 
 /* home & header*/
 $front-header-height: 80px;
-/*
-  .head-margin{
-    margin-top: $front-header-height;
-  }
-*/
+
   .text-center{
     text-align: center;
   }
@@ -44,7 +40,7 @@ $front-header-height: 80px;
         list-style: none;
         width: 25%;
         height: $front-header-height;
-        line-height: $front-header-height;
+        line-height: 60px;
         text-align: center;
         @include transition_all(0.3s);
         cursor: pointer;
@@ -57,10 +53,10 @@ $front-header-height: 80px;
         a {
           @include transition_all(0.3s);
           display: block;
-          height: 100%;
+          //height: 100%;
           color: #99A0B0;
           font-size: 24px;
-          text-decoration: none;
+          //text-decoration: none;
         }
       }
     }

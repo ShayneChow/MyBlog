@@ -9,10 +9,20 @@
 <body>
     <header>
       <div class="container">
-        <h4><%= link_to "骨哥的视界", admin_root_path, id: 'logo' %></h4>
-        <p class="navbar-text navbar-right">
-          <%= link_to '注销', admin_logout_path, class: 'btn-sm btn-danger' %>
-        </p>
+        <nav>
+          <ul class="nav">
+            <li><%= link_to "骨哥的视界", admin_root_path, id: 'title' %></li>
+            <li><%= link_to '文章', admin_posts_path %></li>
+            <li><%= link_to '分享', admin_posts_path %></li>
+            <li><%= link_to '记录', about_path %></li>
+            <li><%= link_to '学习', root_path %></li>
+            <%= link_to '注销', admin_logout_path, class: 'btn-sm btn-danger navbar-right' %>
+            <%= link_to '前台首页', root_path, class: 'btn-sm btn-success navbar-right' %>
+          </ul>
+        </nav>
+
+
+
       </div>
     </header>
     <div class="container">
