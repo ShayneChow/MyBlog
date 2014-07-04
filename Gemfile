@@ -32,9 +32,9 @@ gem 'kaminari'
 #gem "will_paginate"  # rails 2.x 之前的老版本
 
 # Markdown Support
-gem 'redcarpet', '~> 2.0'
+#gem 'redcarpet', '~> 2.0'
 # Code highlight
-gem 'coderay'
+#gem 'coderay'
 
 #安全密码
 gem 'bcrypt-ruby'
