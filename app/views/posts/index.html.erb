@@ -9,17 +9,22 @@
           <% end %>
         </div>
      </div>
+
     <% @posts.each do |post| %>
-        <section class="git">
-          <div class="date">
-            <p class="day"><%= post.created_at.day %></p>
-            <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
+        <section>
+          <div class="content">
+            <div class="date">
+              <p class="year"><%= post.created_at.strftime('%Y-%m') %></p>
+              <p class="day"><%= post.created_at.day %></p>
+            </div>
+            <div class="col-sm-10">
+              <p class="title"><%= link_to post.title, post_path(post.id) %></p>
+              <% if !post.tag_list.blank? %>
+                <p class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%></p>
+              <% end %>
+              <p class="summary"><%= post.desc %>
+            </div>
           </div>
-          <p class="title"><%= link_to post.title, post_path(post.id) %></p>
-          <% if !post.tag_list.blank? %>
-            <p class="tags">Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')%></p>
-          <% end %>
-          <p class="summary"><%= post.desc %>
         </section>
     <% end %>
   </div>

@@ -28,8 +28,7 @@ $front-header-height: 80px;
     left: 0;
     top: 0;
     width: 100%;
-    background: white;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
   }
 
   header{
@@ -44,16 +43,18 @@ $front-header-height: 80px;
         text-align: center;
         @include transition_all(0.3s);
         cursor: pointer;
+        border-bottom:3px solid rgba(106, 174, 227, 0.13);
         &:hover{
-          border-bottom:3px solid rgba(106, 174, 227, 0.13);
+
           a {
             color: #3cc7e7;
           }
         }
         a {
           @include transition_all(0.3s);
-          display: block;
+          //display: block;
           //height: 100%;
+
           color: #99A0B0;
           font-size: 24px;
           //text-decoration: none;
@@ -110,16 +111,37 @@ $front-header-height: 80px;
   }
 }
 
+.date{
+  //margin: 0px 0 0 0px;
+  float: left;
+  height: 110px;
+  width: 110px;
+  @include border_radius(55px);
+  background: rgba(146,238,104,0.8);
+  color: white;
+  text-align: center;
+  .day{
+    font-size: 48px;
+    line-height: 1em;
+    margin-top: 0px;
+  }
+  .year{
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+.content{
+
+
+}
+
 section{
   margin: 0px 40px;
-  padding: 40px 30px 50px 100px;
-  border-bottom: 1px dashed #ccc;
+  padding: 40px 30px 50px 0px;
+
   position: relative;
   &:hover{
-    div{
-      background: #30cc2b;
-    }
-    border-bottom: 3px solid #30cc2b;
+   // border-bottom: 3px solid #30cc2b;
   }
   a{
     &:hover{
@@ -132,32 +154,12 @@ section{
     margin-top:15px;
   }
   .summary{
-    &:first-letter {
-      float:left; /* 设置段落p标签的首字为浮动，让其占据多行的空间 */
-      padding-right: 5px;
-      font-size:2.75em; /* 设置段落p标签的首字为其他字体的2倍 */
-      line-height:1em;
-    }
     clear: both;
     color: #666;
     line-height: 1.5em;
-  }
-  .date{
-    left: 0;
-    top: 0;
-    width: 110px;
-    height: 105px;
-    background: #a06ae3;
-    color: white;
-    text-align: center;
-    .day{
-      font-size: 48px;
-      line-height: 1.5em;
-      margin-bottom: 0px;
-    }
-    .year{
-      font-size: 16px;
-    }
+
+    margin: 0px 0px 20px 0px;
+    border-bottom: 1px dashed #ccc;
   }
 }
 section.node{
