@@ -23,7 +23,7 @@
           <div class="form-group">
             <%= f.label :content, '内容:', class: 'col-sm-2 control-label' %>
             <div class="col-sm-10">
-              <%= f.text_area :content, class: 'form-control', rows: '25', id:'editor', upload: 'true' %>
+              <%= f.text_area :content, class: 'form-control',  id:'editor' %>
             </div>
           </div>
           <div class="clearfix">
@@ -36,6 +36,15 @@
 
 <script type="text/javascript" charset="utf-8">
     var editor = new Simditor({
-        textarea: $('#editor')
+        textarea: $('#editor'),
+        defaultImage: '/images/image.png',
+        placeholder: 'hello world!',
+        upload: {
+            url: '/images/tmp',
+            params: null,
+            fileKey: '',
+            connectionCount: 3 ,
+            leaveConfirm: '正在上传文件，如果离开上传会自动取消'
+        }
     });
 </script>
